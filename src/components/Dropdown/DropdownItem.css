@@ -1,0 +1,19 @@
+.DropdownItem {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  & > span {
+    flex: 1;
+  }
+
+  &:hover {
+    background-color: #f8f8f8;
+  }
+
+  &--selected {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

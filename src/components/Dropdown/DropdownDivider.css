@@ -1,0 +1,6 @@
+.DropdownDivider {
+  margin: 4px 0;
+  border-style: solid;
+  border-top: 0;
+  border-color: rgba(0,0,0,0.15);
+}

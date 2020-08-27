@@ -1,0 +1,29 @@
+.Details {
+  position: relative;
+  cursor: default;
+
+  & > summary {
+    list-style: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  & > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  &.is-animated[open] > *:not(summary) {
+    animation: slideIn 0.2s normal forwards;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

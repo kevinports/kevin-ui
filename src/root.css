@@ -1,0 +1,21 @@
+@import url('./fonts.css');
+@import url('./tokens');
+
+:root {
+  font-family: 'Source Sans', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: 'Source Sans var', sans-serif;
+  }
+}

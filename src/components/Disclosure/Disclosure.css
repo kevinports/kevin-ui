@@ -1,0 +1,17 @@
+.Disclosure-toggle {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+
+  & > .Icon {
+    transition: 0.1s transform;
+    transform: rotate(0);
+  }
+  &.is-open .Icon  {
+    transform: rotate(90deg);
+  }
+}
+
+.Disclosure-contents {
+  padding-left: 16px;
+}

@@ -1,0 +1,15 @@
+.Stack {
+  display: grid;
+  grid-auto-flow: var(--flow);
+  grid-gap: var(--gap);
+}
+
+.Stack--y {
+  align-items: var(--distribute);
+  justify-content: var(--align);
+}
+
+.Stack--x {
+  align-items: var(--align);
+  justify-content: var(--distribute);
+}
