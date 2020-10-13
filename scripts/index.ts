@@ -104,12 +104,25 @@ function writeFile (name, data) {
   }
 }
 
+
+// function generateColor () {
+//   console.log('color')
+//   const colors = {
+//     green: "#009618",
+//     tan: "#D29A46"
+//   }
+
+// }
+
 function run () {
   const tokenData = {
     spaces: generateScale('major3rd'),
-    fontSizes: generateScale('major2nd'),
+    fontSizes: generateScale('major2nd')
   };
   writeToCSS(tokenData);
   writeToJson(tokenData);
+
+  // generateColor();
 }
+
 run();

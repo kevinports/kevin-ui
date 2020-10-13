@@ -1,4 +1,5 @@
 .Details {
+  display: inline-block;
   position: relative;
   cursor: default;
 

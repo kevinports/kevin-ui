@@ -3,13 +3,13 @@ import React from 'react';
 import { Checkmark } from '../Icon';
 
 interface props {
-  selected: boolean;
-  onClick: Function;
+  selected?: boolean;
+  onClick?: Function;
 }
 
 export const DropdownItem:React.SFC<props> = ({
   children,
-  selected,
+  selected = false,
   onClick
 }) => {
   const handleClick = (e) => {

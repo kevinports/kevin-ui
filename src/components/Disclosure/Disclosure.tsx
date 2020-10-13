@@ -4,11 +4,14 @@ import { Details } from '../Details';
 import { CaretRight } from '../Icon';
 
 interface props {
-  text: string;
+  /**
+   * Label for the summary
+   */
+  label: string;
 }
 
 export const Disclosure:React.SFC<props> = ({
-  text,
+  label,
   children
 }) => {
   return (
@@ -17,7 +20,7 @@ export const Disclosure:React.SFC<props> = ({
         <>
           <summary className={`Disclosure-toggle${open ? ' is-open' : ''}`}>
             <CaretRight />
-            {text}
+            {label}
           </summary>
           <div className="Disclosure-contents">
             {children}

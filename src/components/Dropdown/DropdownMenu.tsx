@@ -3,7 +3,8 @@ import React from 'react';
 
 interface props {
   position?: 'left' | 'right',
-  display?: boolean
+  display?: boolean;
+  block?: boolean;
 }
 
 export const DropdownMenu:React.SFC<props> = ({

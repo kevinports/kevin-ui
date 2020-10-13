@@ -1,11 +1,14 @@
 import './Button.css';
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-interface props {
-  as: 'button', 'a', 'summary'
+export interface ButtonProps {
+  as?: 'button' | 'a' | 'summary';
+  children: ReactNode;
+  href?: string;
+  onClick?: Function;
 }
 
-export const Button:React.SFC<props & React.AnchorHTMLAttributes> = ({
+export const Button:React.SFC<ButtonProps> = ({
   as = 'button',
   children,
   ...rest

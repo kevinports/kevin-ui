@@ -2,11 +2,13 @@
   display: grid;
   grid-auto-flow: var(--flow);
   grid-gap: var(--gap);
+  width: var(--width);
+  height: var(--height);
 }
 
 .Stack--y {
-  align-items: var(--distribute);
-  justify-content: var(--align);
+  align-content: var(--distribute);
+  justify-items: var(--align);
 }
 
 .Stack--x {

@@ -1,13 +1,26 @@
 import './Portal.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import { usePrevious } from '../../hooks/usePrevious';
 
 interface props {
+  /**
+   * Opening the Portal is controlled by the Portal's parent component
+   */
   isOpen: boolean;
-  onClose: Function;
+  /**
+   * For the parent to handle the Portal closing
+   */
+  onClose?: Function;
+  /**
+   * Use this delay to animate the children using the `willOpen` prop passed to the children on render
+   */
   openDelay?: number;
+  /**
+   * Use this delay to animate the children using the `willClose` prop passed to the children on render
+   */
   closeDelay?: number;
+  children: any;
 }
 
 export const Portal:React.SFC<props> = ({

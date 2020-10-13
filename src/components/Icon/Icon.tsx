@@ -1,7 +1,7 @@
 import './Icon.css';
 import React from 'react';
 
-const Icon:React.SFC<HTMLElement> = ({children, className, ...rest}) => {
+const Icon:React.SFC<any> = ({children, className, ...rest}) => {
   return (
     <svg
       className={`Icon${className ? ' ' + className : ''}`}

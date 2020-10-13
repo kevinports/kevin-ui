@@ -1,25 +1,38 @@
 {
-  "name": "x-ui",
+  "name": "Kevin-UI",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "cleanup": "rm -rf .cache dist",
     "tokens": "tsc -p scripts/tsconfig.json && node scripts/.tmp/index.js",
-    "start": "npm run cleanup && parcel ./src/index.html"
+    "start": "npm run cleanup && parcel ./src/index.html",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "Kevin",
   "dependencies": {
-    "fonts.css": "^2.0.0",
+    "core-js": "^3.6.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@storybook/addon-actions": "^6.0.19",
+    "@storybook/addon-essentials": "^6.0.19",
+    "@storybook/addon-links": "^6.0.19",
+    "@storybook/addon-storysource": "^6.0.19",
+    "@storybook/react": "^6.0.19",
     "@types/node": "^14.6.0",
+    "@types/react": "^16.9.48",
+    "@types/react-dom": "^16.9.8",
     "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.1.0",
     "parcel-bundler": "^1.12.4",
+    "postcss-loader": "^3.0.0",
     "postcss-modules": "^3.2.0",
     "postcss-nested": "^4.2.3",
+    "react-is": "^16.13.1",
     "source-sans-pro": "^3.6.0",
     "typescript": "^3.9.7"
   }

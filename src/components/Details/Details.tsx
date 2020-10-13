@@ -1,11 +1,21 @@
 import './Details.css';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, ReactElement } from 'react';
 
 interface props {
-  render: Function | React.ReactNode;
-  onToggle: Function;
+  /**
+   * For the parent to handle the Details toggling.
+   */
+  onToggle?: Function;
+  /**
+   * Animate the entry of the Details contents.
+   */
   animate?: boolean;
+  /**
+   * Present the Details contents as an overlay. Clicking anywhre outside the contents will hide them.
+   */
   overlay?: boolean;
+  children: any;
+  className?: string;
 }
 
 function getRenderer(children) {
@@ -14,11 +24,11 @@ function getRenderer(children) {
 
 export const Details:React.SFC<props> = ({
   children,
-  render = getRenderer(children),
   overlay = false,
   animate = false,
   onToggle
 }) => {
+  const render = getRenderer(children);
   const element = useRef(null);
   const [open, setOpen] = useState(false);
 

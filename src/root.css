@@ -1,5 +1,5 @@
 @import url('./fonts.css');
-@import url('./tokens');
+@import url('./tokens/index.css');
 
 :root {
   font-family: 'Source Sans', sans-serif;
@@ -11,6 +11,7 @@
   * {
     box-sizing: border-box;
     margin: 0;
+    outline-offset: 2px;
   }
 }
 
